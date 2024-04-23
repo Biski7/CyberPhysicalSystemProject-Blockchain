@@ -36,6 +36,7 @@ python BC.py
 python RSA.py 
     # This creates two keys in you current directory. First is the private key, and public key is dervied from it. 
     # You can change the key size used in the program easily.
+    # Make sure you use the public key of other node to encrypt and private key of own node to decrypt. i.e., share public key, but keep private key.
 
 # Github Repo
 https://github.com/Biski7/CyberPhysicalSystemProject-Blockchain

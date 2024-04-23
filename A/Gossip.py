@@ -121,7 +121,13 @@ class GossipNode:
                     time.sleep(5)
                     server(i)
                     print("Server ran SUCCESSFULLY")
-                    self.ask_question()
+                # self.ask_question()
+                # input_from_node = input(f"{Colors.RED}Enter 1 to update or 2 to exit.{Colors.RESET}\n")
+                # if input_from_node == '1':
+                #     latest_block_number = self.find_latest_block()
+                #     self.transmit_message(str(latest_block_number).encode('ascii')) 
+                # else:
+                #     exit()
 
             else:
                 my_block_list = []

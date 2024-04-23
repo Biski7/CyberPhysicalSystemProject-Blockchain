@@ -119,11 +119,11 @@ class Blockchain(object):
 ########################################################
 ### Function for proof of work
 ########################################################
-    def proof_of_work(self, hashString):
+    def proof_of_work(self, hashString, index, timestamp):
         hashStart = hashGenerator( hashGenerator(hashString) + hashGenerator(str(index)) + hashGenerator(str(timestamp) + str(self.nonce)))
         while not hashStart.startswith('0' * self.difficulty):
             self.nonce +=1 
-            hashStart = hashGenerator( hashGenerator('gen_hash') + hashGenerator(str(index)) + hashGenerator(str(timestamp) + str(self.nonce)))
+            hashStart = hashGenerator( hashGenerator(hashString) + hashGenerator(str(index)) + hashGenerator(str(timestamp) + str(self.nonce)))
         return hashStart
     
 ########################################################
@@ -139,8 +139,9 @@ class Blockchain(object):
         hash_of_current_block = 0
         data_hash, data = hashGeneratorfile(file_name)
         hash_string = str(timestamp).join([str(index), hash_of_previous_block,data_hash])
-        hash_of_current_block = hashGenerator(hash_string)
-        
+        # hash_of_current_block = hashGenerator(hash_string)
+        hash_of_current_block = self.proof_of_work(hash_string,index, timestamp)
+
         block = {
             'index': index,
             'data': data,

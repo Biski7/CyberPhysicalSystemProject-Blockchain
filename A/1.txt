@@ -1,0 +1,1 @@
+{"index": 0, "data": "gen_hash", "timestamp": "2024-04-23 00:31:30.699942", "hash_of_current_block": "00055d92d69e7db90fdcf4005ee33e443a816155d376e541311744e6299ef0cf", "hash_of_previous_block": null}
