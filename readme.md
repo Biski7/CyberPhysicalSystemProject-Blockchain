@@ -1,7 +1,8 @@
+Blockchain with socket communication and two nodes. LAN setup with two nodes. RSA algorithm for encrypting and decrypting the blocks. SHA-256 hashing for hashing the blockchain. 
+
 6 Files in each folder (Node):
 1) BC.py
 2) Client.py
-3) Server.py
 4) Node_A.py
 5) RSA.py
 6) Gossip.py 
@@ -47,3 +48,5 @@ Step 2: Change the IP address, and port address of your nodes in the Node_A and 
 Step 3: Also make subsequent changes in server.py and client.py in every node. 
 Step 4: Change the file path in the BC.py file, and Gossip.py file.
 Step 5: Run the nodes (Node_A, Node_B, and any other nodes you added) using commands as per "Running the code" section above.
+
+
